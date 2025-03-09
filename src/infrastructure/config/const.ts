@@ -1,0 +1,1 @@
+export const LOADING_MIN_TIME = 500

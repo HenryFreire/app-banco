@@ -93,11 +93,12 @@ const ProductForm = ({ defaultValues, onSubmit, isEditing = false }: ProductForm
             <TouchableWithoutFeedback onPress={Keyboard.dismiss}>
                 <ScrollView contentContainerStyle={styles.scrollContainer}>
                     <View style={styles.container}>
-                        <InputControl name="id" control={control} label="ID"  disabled={isEditing} editable={!isEditing}/>
-                        <InputControl name="name" control={control} label="Nombre" />
-                        <InputControl name="description" control={control} label="Descripción" />
-                        <InputControl name="logo" control={control} label="Logo" />
+                        <InputControl testID="input-id" name="id" control={control} label="ID"  disabled={isEditing} editable={!isEditing}/>
+                        <InputControl testID="input-name" name="name" control={control} label="Nombre" />
+                        <InputControl testID="input-description" name="description" control={control} label="Descripción" />
+                        <InputControl testID="input-logo"  name="logo" control={control} label="Logo" />
                         <CalendarInputControl
+                            testID="input-date_release"
                             control={control}
                             name="date_release"
                             label="Fecha Liberación"
@@ -105,6 +106,7 @@ const ProductForm = ({ defaultValues, onSubmit, isEditing = false }: ProductForm
                             mode="date"
                         />
                         <InputControl
+                            testID="input-date_revision"
                             control={control}
                             name="date_revision"
                             label="Fecha Revisión"

@@ -13,12 +13,12 @@ const ScreenWrapper: React.FC<ScreenWrapperProps> = ({ children }) => {
   const { theme } = useContext(ThemeContext);
 
   return (
-    <SafeAreaView style={[styles.safeArea, { backgroundColor: theme.colors.background }]}>
+    <SafeAreaView testID="safe-area-view" style={[styles.safeArea, { backgroundColor: theme.colors.background }]}>
       <KeyboardAvoidingView
         behavior={Platform.OS === "ios" ? "padding" : "height"}
         style={{ flex: 1 }}
       >
-          <View style={[styles.container, { backgroundColor: theme.colors.background }]}>
+          <View testID="screen-container" style={[styles.container, { backgroundColor: theme.colors.background }]}>
             {children}
           </View>
       </KeyboardAvoidingView>

@@ -17,9 +17,9 @@ const Loading: React.FC<LoadingProps> = ({ size = 'large', color, fullScreen = t
   if (!loading) return null; 
 
   return (
-    <Modal transparent animationType="fade" visible={loading}>
+    <Modal testID="modal-loading" transparent animationType="fade" visible={loading}>
       <View style={styles.overlay}>
-        <ActivityIndicator size="large" color={theme.colors.primary}/>
+        <ActivityIndicator testID='loading-indicator' size="large" color={theme.colors.primary}/>
       </View>
     </Modal>
   );

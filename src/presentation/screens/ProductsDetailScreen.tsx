@@ -35,6 +35,7 @@ export const ProductsDetailScreen = () => {
             setLoading(false)
         }).catch((error) => {
             setLoading(false)
+            Alert.alert("Info", "Error obteniendo el producto")
             console.log("Error obteniendo el producto:", error)
         });
     }, [productId]);
@@ -51,6 +52,7 @@ export const ProductsDetailScreen = () => {
                 }])
             }).catch(error => {
                 setLoading(false)
+                Alert.alert("Info", "Error eliminando el producto")
                 console.log("Error obteniendo el producto:", error) 
             })
     };

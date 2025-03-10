@@ -46,6 +46,7 @@ export function CalendarInputControl<T extends FieldValues>({
 
           {show && (
             <DateTimePicker
+              testID="date-picker"
               value={value ? new Date(value) : new Date()}
               mode={mode}
               display={Platform.OS === "ios" ? "spinner" : "default"}

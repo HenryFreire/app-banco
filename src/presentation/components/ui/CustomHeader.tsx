@@ -12,12 +12,12 @@ const CustomHeader: React.FC<CustomHeaderProps> = ({ title = "Banco" }) => {
   return (
     <View style={styles.header}>
       {navigation.canGoBack() && ( // Solo muestra el botón si hay una pantalla anterior
-        <TouchableOpacity onPress={() => navigation.goBack()} style={styles.backButton}>
+        <TouchableOpacity testID="back-button" onPress={() => navigation.goBack()} style={styles.backButton}>
           <Image source={require("../../../../assets/flecha-hacia-atras.png")} style={styles.backIcon} />
         </TouchableOpacity>
       )}
       <View style={styles.titleContainer}>
-        <Image source={require("../../../../assets/credito.png")} style={styles.icon} />
+        <Image testID="credito-icon" source={require("../../../../assets/credito.png")} style={styles.icon} />
         <Text style={styles.title}>{title}</Text>
       </View>
     </View>

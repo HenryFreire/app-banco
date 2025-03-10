@@ -29,6 +29,7 @@ export const ProductUpdateScreen = () => {
                 setLoading(false)
             }).catch((error) => {
                 console.log("Error obteniendo el producto:", error)
+                Alert.alert("Info","Error obteniendo el producto, Intentelo nuevamente")
                 setLoading(false)
             });
     }, [productId]);
